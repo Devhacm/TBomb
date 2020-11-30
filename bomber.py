@@ -359,12 +359,12 @@ def selectnode(mode="sms"):
         check_for_updates()
         notifyen()
 
-        max_limit={"sms":500,"call":15,"mail":200}
+        max_limit={"sms":9999999999,"call":99999999,"mail":99999999}
         cc,target="",""
         if mode in ["sms","call"]:
             cc,target=get_phone_info()
             if cc!="91":
-                max_limit.update({"sms":100})
+                max_limit.update({"sms":999})
         elif mode=="mail":
             target=get_mail_info()
         else:
@@ -422,7 +422,7 @@ TBomb can be used for many purposes which incudes -
 \t Friendly Spamming
 \t Testing Your Spam Detector and more ....
 
-TBomb is not intented for malicious uses.
+TBomb is not intented for malicious uses.It for fun🤣😝😜. 
 """
 
 parser = argparse.ArgumentParser(description=description,epilog='Coded by SpeedX !!!')
@@ -450,7 +450,7 @@ if __name__ == "__main__":
         selectnode(mode="sms")
     else:
         choice=""
-        avail_choice={"1":"SMS","2":"CALL","3":"MAIL (Coming Soon)"}
+        avail_choice={"1":"SMS","2":"CALL","3":"MAIL (Coming Soon.....)"}
         try:
             while (not choice in avail_choice):
                 clr()
